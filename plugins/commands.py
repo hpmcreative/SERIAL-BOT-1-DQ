@@ -317,6 +317,11 @@ async def start(client, message):
                 except:
                     return
             await msg.edit_caption(f_caption)
+            vp = await msg.reply_text("<b><i>Note: This message is deleted in 10 mins to avoid copyrights. Save the file to Somewhere else</b></i>")
+            time.sleep(600)
+            await msg.delete()
+            await vp.delete()
+            await client.send_message(message.from_user.id, "Your requested file is successfully deleted!!!")
             return
         except:
             pass
