@@ -196,7 +196,7 @@ async def start(client, message):
             await asyncio.sleep(1) 
         await sts.delete()
         await client.send_message("<b><i>Note: This files will be deleted in 10 mins to avoid copyrights. Save the files to Somewhere else</b></i>")
-        time.sleep(600)
+        await asyncio.sleep(600)
         for delmsg in VP_MSGS:
             await delmsg.delete()
         btn = [[
