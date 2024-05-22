@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ['API_ID'])
-API_HASH = environ['API_HASH']
-BOT_TOKEN = environ['BOT_TOKEN']
+API_ID = int(environ.get('API_ID', '13305226'))
+API_HASH = environ.get('API_HASH', '8cde2475d6b0cb1162b89ebbac71a95d')
+BOT_TOKEN = environ.get('BOT_TOKEN', "6621594376:AAGCwfRJKYFVyyACBA5PFxDpPzzye95MmwU")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -51,10 +51,10 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Others
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/Asianet_serial_HPM/329")
-VERIFY2_URL = environ.get('VERIFY2_URL', "runurl.in")
-VERIFY2_API = environ.get('VERIFY2_API', "8afa1a7e0ba6e5f2e665fad12d2f8e31d402afcc")
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'runurl.in')
-SHORTLINK_API = environ.get('SHORTLINK_API', '8afa1a7e0ba6e5f2e665fad12d2f8e31d402afcc')
+VERIFY2_URL = environ.get('VERIFY2_URL', "publicearn.com")
+VERIFY2_API = environ.get('VERIFY2_API', "f2f53890ad92447149ae0361f89b5449d5b24746")
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'publicearn.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'f2f53890ad92447149ae0361f89b5449d5b24746')
 IS_SHORTLINK = is_enabled((environ.get('IS_SHORTLINK', 'False')), False)
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
